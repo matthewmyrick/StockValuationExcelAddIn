@@ -121,13 +121,16 @@
   <data name="api-settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\api-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="big-data-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big-data-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="api-settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\api-settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="source-code" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\source-code.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="big-data-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big-data-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StockChart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StockChart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

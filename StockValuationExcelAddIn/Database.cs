@@ -94,15 +94,11 @@ namespace StockValuationExcelAddIn
             {
                 command = new SqlCommand(sql, cnn);
                 dataReader = command.ExecuteReader();
-                MessageBox.Show("Added Symbol to DB.");
                 command.Dispose();
                 cnn.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("Error Adding Symbol to Database.");
-                MessageBox.Show(ex.Message);
-
                 cnn.Close();
             }
         }

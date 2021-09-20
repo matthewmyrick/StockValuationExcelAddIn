@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Windows.Forms;
+using System.Net;
 
 namespace StockValuationExcelAddIn
 {
@@ -14,21 +15,25 @@ namespace StockValuationExcelAddIn
         Config.Urls urls = new Config.Urls();
 
         // Historical Prices Requests 
-        public async Task<List<DataStructures.DcfHistorical>> HistoricalPricesDaily(string symbol, String timeframe, int limit)
+        public async Task<DataStructures.HistoricalPricesWrapper> HistoricalPrices(string symbol, string timeframe, int limit)
         {
             try
             {
                 var client = new HttpClient();
-                String URL = urls.HISTORICAL_PRICES_DAILY(symbol, limit);
-
+                String URL = urls.HISTORICAL_PRICES(symbol, timeframe, limit);
                 String responseString = await client.GetStringAsync(URL);
-                List<DataStructures.DcfHistorical> responseList = JsonConvert.DeserializeObject<List<DataStructures.DcfHistorical>>(responseString);
-                return responseList;
+                DataStructures.HistoricalPricesWrapper response = JsonConvert.DeserializeObject<DataStructures.HistoricalPricesWrapper>(responseString);
+                return response;
             }
-            catch
+            catch(HttpRequestException ex)
             {
-                MessageBox.Show("Error Getting Data.");
-                List<DataStructures.DcfHistorical> errorList = new List<DataStructures.DcfHistorical>();
+                string errorMessage = ex.Message +
+                        "\nPossible Errors:" +
+                        "\n\t- Please check inputs" +
+                        "\n\t- API key incorrect please check API settings" +
+                        "\n\t- This Data Request is only for preimuim users";
+                MessageBox.Show(ex.Message);
+                DataStructures.HistoricalPricesWrapper errorList = new DataStructures.HistoricalPricesWrapper();
                 return errorList;
             }
         }
@@ -45,9 +50,14 @@ namespace StockValuationExcelAddIn
                 List<DataStructures.DcfHistorical> responseList = JsonConvert.DeserializeObject<List<DataStructures.DcfHistorical>>(responseString);
                 return responseList;
             }
-            catch
+            catch(HttpRequestException ex)
             {
-                MessageBox.Show("Error Getting Data.");
+                string errorMessage = ex.Message + 
+                    "\nPossible Errors:" +
+                    "\n\t- Please check inputs" +
+                    "\n\t- API key incorrect please check API settings" +
+                    "\n\t- This Data Request is only for preimuim users";
+                MessageBox.Show(errorMessage);
                 List<DataStructures.DcfHistorical> errorList = new List<DataStructures.DcfHistorical>();
                 return errorList;
             }

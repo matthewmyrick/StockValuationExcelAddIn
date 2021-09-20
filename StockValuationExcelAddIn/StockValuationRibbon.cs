@@ -40,21 +40,64 @@ namespace StockValuationExcelAddIn
 
         private void GenerateHistoricalDcf_Click(object sender, RibbonControlEventArgs e)
         {
-            string symbol = TickerSymbol.Text.ToString().ToUpper();
-            // save latest symbol to database
-            database.SaveCurrentTicker(symbol);
+            // get current api
+            string api = database.GetApi().ToString();
+            if (api == "demo" || api == "")
+            {
+                MessageBox.Show("Please add an API Key for this feature.");
+            }
+            else
+            {
+                try
+                {
+                    // get current symbol 
+                    string symbol = TickerSymbol.Text.ToString().ToUpper();
 
-            // create new worksheet 
-            var driver = Globals.ThisAddIn;
-            Workbook currentWorkBook = driver.GetActiveWorkbook();
-            string dcfSheetTitle = driver.AddWorksheet(symbol + " DCF Historical Data");
-            Worksheet dcfHistoricalSheet = currentWorkBook.Sheets[dcfSheetTitle];
+                    // save latest symbol to database
+                    database.SaveCurrentTicker(symbol);
 
-            // DCF Response List
-            List<DataStructures.DcfHistorical> responseList = requests.DcfRequestHistorical(symbol, "daily", 25).Result;
-            
-            // Display Data
-            dcfHistoricalSheet.Cells[1, 1] = "Hello";
+                    // initialize object
+                    Forms.DcfHistoricalForm app = new Forms.DcfHistoricalForm();
+                    app.Show();
+                }
+                catch
+                {
+                    MessageBox.Show("Error opening feature.");
+                }
+            }
+
+        }
+
+        // Historical Prices Groups
+        private void historicalDataButton_Click(object sender, RibbonControlEventArgs e)
+        {
+            // get current api
+            string api = database.GetApi().ToString();
+            if (api == "demo" || api == "")
+            {
+                MessageBox.Show("Please add an API Key for this feature.");
+            }
+            else
+            {
+                try
+                {
+                    // get current symbol 
+                    string symbol = TickerSymbol.Text.ToString().ToUpper();
+
+                    // save latest symbol to database
+                    database.SaveCurrentTicker(symbol);
+
+                    // initialize forms application
+                    Forms.HistoricalStockData app = new Forms.HistoricalStockData();
+                    app.Show();
+                }
+                catch
+                {
+                    MessageBox.Show("Error opening feature.");
+                }
+
+            }
+
 
         }
 
@@ -76,5 +119,7 @@ namespace StockValuationExcelAddIn
             ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/matthewmyrick");
             Process.Start(sInfo);
         }
+
+        
     }
 }

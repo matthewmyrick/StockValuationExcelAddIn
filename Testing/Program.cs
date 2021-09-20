@@ -10,14 +10,14 @@ namespace Testing
         public static Requests requests = new Requests();
         static void Main(string[] args)
         {
-            string test = requests.test().Result;
-            DataStructuresTest.HistoricalPricesWrapper testList = JsonConvert.DeserializeObject<DataStructuresTest.HistoricalPricesWrapper>(test);
-            Console.WriteLine(testList.symbol);
-            Console.WriteLine(testList.historical);
-            /*            foreach (var i in testList.historical)
-                        {
+            DataStructuresTest.HistoricalPricesWrapper testList = requests.test().Result;
 
-                        }*/
+            Console.WriteLine(testList.symbol);
+            foreach (var i in testList.historical)
+            {
+                Console.WriteLine(i.close);
+            }
+            /*            Console.WriteLine(testList.historical);*/
         }
     }
 }

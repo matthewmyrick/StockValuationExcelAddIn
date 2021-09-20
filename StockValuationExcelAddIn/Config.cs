@@ -15,14 +15,21 @@ namespace StockValuationExcelAddIn
             static Config config = new Config();
             
             // Historical Prices url Confgis
-            public string HISTORICAL_PRICES_DAILY(string symbol, int limit)
+            public string HISTORICAL_PRICES(string symbol, string timeframe, int limit)
             {
                 String API = db.GetApi();
-                return String.Format(
-                    config.BASE_URL + "/api/v3/historical-price-full/{0}?timeseries={1}&apikey={2}", symbol.ToUpper(), limit, API
-                    );
-            }
+                if (timeframe == "daily")
+                {
+                    return String.Format(
+                        config.BASE_URL + "/api/v3/historical-price-full/{0}?timeseries={1}&apikey={2}", symbol.ToUpper(), limit, API
+                        );
+                }
+                else
+                {
+                    return "String URL Error";
+                }
 
+            }
 
             // DCF url Configs 
             public String DCF_URL_CURRENT(String symbol)
@@ -33,27 +40,28 @@ namespace StockValuationExcelAddIn
                     );
             }
 
+            // DCF Historical Prices
             public String DCF_URL_HISTORICAL(String symbol, String timeframe, int limit)
             {
                 String API = db.GetApi();
-                if (timeframe == "daily")
+                if (timeframe == "day")
                 {
                     return String.Format(
-                    config.BASE_URL + "/api/v3/historical-daily-discounted-cash-flow/{0}?limit={1}&apikey={2}",
+                    config.BASE_URL + "/api/v3/historical-discounted-cash-flow-statement/{0}?limit={1}&apikey={2}",
                     symbol.ToUpper(), limit.ToString(), API
                     );
                 }
                 else if (timeframe == "quarterly")
                 {
                     return String.Format(
-                    config.BASE_URL + "/api/v3/historical-discounted-cash-flow-statement/{0}?period=quarter&apikey={1}", symbol.ToUpper(), API
-                    );
+                    config.BASE_URL + "/api/v3/historical-discounted-cash-flow-statement/{0}?period=quarter&limit={1}&apikey={2}", 
+                    symbol.ToUpper(), limit.ToString(), API);
                 }
                 else if (timeframe == "yearly")
                 {
                     return String.Format(
-                    config.BASE_URL + "/api/v3/historical-discounted-cash-flow-statement/{0}&apikey={1}", symbol.ToUpper(), API
-                    );
+                    config.BASE_URL + "/api/v3/historical-discounted-cash-flow-statement/{0}?limit={1}&apikey={2}", 
+                    symbol.ToUpper(), limit.ToString(), API);
                 }
                 else
                 {

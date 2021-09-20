@@ -9,12 +9,12 @@ namespace Testing
     public class Requests
     {
 
-        public async Task<string> test()
+        public async Task<DataStructuresTest.HistoricalPricesWrapper> test()
         {
             var client = new HttpClient();
             String responseString = await client.GetStringAsync("https://financialmodelingprep.com/api/v3/historical-price-full/AAPL?timeseries=5&apikey=7e0134732ec908ce5bc75bc77a64c8a2");
-            Console.WriteLine(responseString);
-            return responseString;
+            DataStructuresTest.HistoricalPricesWrapper testList = JsonConvert.DeserializeObject<DataStructuresTest.HistoricalPricesWrapper>(responseString);
+            return testList;
         }
     }
 }

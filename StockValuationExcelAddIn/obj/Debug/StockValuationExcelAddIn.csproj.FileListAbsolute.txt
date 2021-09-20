@@ -17,3 +17,5 @@ C:\Users\matth\OneDrive\Documents\GitHub\StockValuationExcelAddIn\StockValuation
 C:\Users\matth\OneDrive\Documents\GitHub\StockValuationExcelAddIn\StockValuationExcelAddIn\obj\Debug\StockValuationExcelAddIn.StockValuationRibbon.resources
 C:\Users\matth\OneDrive\Documents\GitHub\StockValuationExcelAddIn\StockValuationExcelAddIn\bin\Debug\StockValuationExcelAddIn.dll.config
 C:\Users\matth\OneDrive\Documents\GitHub\StockValuationExcelAddIn\StockValuationExcelAddIn\obj\Debug\StockValuationExcelAddIn.ApiKeyForm.resources
+C:\Users\matth\OneDrive\Documents\GitHub\StockValuationExcelAddIn\StockValuationExcelAddIn\obj\Debug\StockValuationExcelAddIn.Forms.DcfHistoricalForm.resources
+C:\Users\matth\OneDrive\Documents\GitHub\StockValuationExcelAddIn\StockValuationExcelAddIn\obj\Debug\StockValuationExcelAddIn.Forms.HistoricalStockData.resources

@@ -93,6 +93,16 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="PresentationCore" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="PresentationFramework" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
     </dependentAssembly>
   </dependency>
@@ -628,6 +638,11 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="System.Xaml" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="System.Xml" version="4.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" />
     </dependentAssembly>
   </dependency>
@@ -667,6 +682,11 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="WindowsBase" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Office.Tools.Common.v4.0.Utilities.dll" size="32664">
       <assemblyIdentity name="Microsoft.Office.Tools.Common.v4.0.Utilities" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -691,14 +711,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StockValuationExcelAddIn.dll" size="114176">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StockValuationExcelAddIn.dll" size="128000">
       <assemblyIdentity name="StockValuationExcelAddIn" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>r4+uqh03ma9VKwDBP6OaG8of/h8zhDdVoVOhanlu1Ns=</dsig:DigestValue>
+        <dsig:DigestValue>ophU56fVLdrl6+r5RtSC1iGfnx8uE2PC3ROjtkPB9Hk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -754,4 +774,4 @@
       </vstov4:customizations>
     </vstav3:application>
   </vstav3:addIn>
-<publisherIdentity name="CN=DESKTOP-PP4493S\matth" issuerKeyHash="12b4969cd1a3ebfcf7163b9bb1793030decc38ad" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7bbAf5S4ENth3Z/sfGgV46KM2iBauzeopyJYvX07oVQ=</DigestValue></Reference></SignedInfo><SignatureValue>ggge+jOPTnhqTcTSwkllKtTjBU+SMYKkV4T3sz/7hIla23CX+c2jj9XPz5LFI9K4P19MXUFahpJsVcyTS1A/6TukM0I5vJ6PI2sFkROE+j3zBBwgDw9shHgw+Ps1Rn0IO2cbELNgTHW84b5M3dYRLZ6aMdVzVet5L3p2+EZ4WXI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xScU1J1lbiJOsuAecxlsRmM4Z8vaWjP7SVLItW6t8V2h/4snw0PLFmxSdu/4RtAno2uN/UtLXcVyLEYhtxO0ra7J1hsTRNT+zN1sGKTp2tmJZM7Cyddv6de870sMzbwpLsTulmH+uC+7Wx6WG4ZDi2lKpG8AmW63f6UDwYxhiyU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="54a13b7dbd5822a7a837bb5a20da8ca2e315687cec9fdd61db10b8947fc0b6ed" Description="" Url=""><as:assemblyIdentity name="StockValuationExcelAddIn.dll" version="1.0.0.0" publicKeyToken="e5373f0f73d9bf58" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-PP4493S\matth</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>NRUwPDe7TRqw75JIpGiZ4KoiyA5k9WweYHHcBj68j2I=</DigestValue></Reference></SignedInfo><SignatureValue>nsX+ZJvrMgrEuEb25fcCFgzRTVvwqAtxxENKoTIRkiw2xyzL37jp9YpPVS1nkDYBuxYHOGmrhg1CCVwaarlclV73m0Zy3fMewdsdUJAW9jrnpEFv2TT3xNwmi8G4J/PdVlJmPNsPzf7jlxsW/IjONQuFtA1Zt8gonbwLRDbP7b4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xScU1J1lbiJOsuAecxlsRmM4Z8vaWjP7SVLItW6t8V2h/4snw0PLFmxSdu/4RtAno2uN/UtLXcVyLEYhtxO0ra7J1hsTRNT+zN1sGKTp2tmJZM7Cyddv6de870sMzbwpLsTulmH+uC+7Wx6WG4ZDi2lKpG8AmW63f6UDwYxhiyU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQT8yomAMfi5xCgpY4ucsQNDANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFAAUAA0ADQAOQAzAFMAXABtAGEAdAB0AGgwHhcNMjEwOTA2MTgzODQ1WhcNMjIwOTA3MDAzODQ1WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFAAUAA0ADQAOQAzAFMAXABtAGEAdAB0AGgwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMUnFNSdZW4iTrLgHnMZbEZjOGfL2loz+0lSyLVurfFdof+LJ8NDyxZsUnbv+EbQJ6Nrjf1LS13FcixGIbcTtK2uydYbE0TU/szdbBik6drZiWTOwsnXb+nXvO9LDM28KS7E7pZh/rgvu1selhuGQ4tpSqRvAJlut3+lA8GMYYslAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAoF+zbxVyct8wRPzcs7HPOw6G9PUeO6aCgHIxXq0q8n1P/PPyeevGgEUi4Pa9Mu1R5u1PFu67iTXbexPdQoBXj5TKCZ5rS5qRh+yIpZnId4NqAZzG0OkZWm5vkphktUGfwc3tqTz1xfLVo7mjxqk763qSLLPNiE1As++y9llNv4o=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-PP4493S\matth" issuerKeyHash="12b4969cd1a3ebfcf7163b9bb1793030decc38ad" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>jCEfmWXctQOvS01oa5nnIivfkdlkPAoXycg0yhyLjKU=</DigestValue></Reference></SignedInfo><SignatureValue>YfmrLlUTGM8pdl8gFXsKrbepDzlY1ir7dMXqO1cTEzxfrDsUCxMw4wVcVY83xRC8UqPFu3AEWwHlUty0JbrDJQqh2gm5H/ZHvv4xsGMtGL+d6lu68X7JCVD6HarD3mq67wjandpSBJ5+MeWRQ7706NrenjRQJO6KJr74ekV+ilI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xScU1J1lbiJOsuAecxlsRmM4Z8vaWjP7SVLItW6t8V2h/4snw0PLFmxSdu/4RtAno2uN/UtLXcVyLEYhtxO0ra7J1hsTRNT+zN1sGKTp2tmJZM7Cyddv6de870sMzbwpLsTulmH+uC+7Wx6WG4ZDi2lKpG8AmW63f6UDwYxhiyU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="a58c8b1cca34c8c9170a3c64d991df2b22e7996b684d4baf03b5dc65991f218c" Description="" Url=""><as:assemblyIdentity name="StockValuationExcelAddIn.dll" version="1.0.0.0" publicKeyToken="e5373f0f73d9bf58" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-PP4493S\matth</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>zN377T/vSke09s+K7JwvOS7Cr6ny1cGRzecwENBmmxU=</DigestValue></Reference></SignedInfo><SignatureValue>Wt8EJulkcZEQRPHjeSmIOkOvszzU+xeAhrYdedALvvPHZsRXBRzfl5k2Z221NWvmZWDblKTxElqO0AK61YHIGD2X2Vh3zN7/AsKUGlDNmfUgSzOIaYhR8MlI6dXSo3n36fsJeLUDl2v1b02tF6sFbVZOga3SBR4dsFlNLk7vVok=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xScU1J1lbiJOsuAecxlsRmM4Z8vaWjP7SVLItW6t8V2h/4snw0PLFmxSdu/4RtAno2uN/UtLXcVyLEYhtxO0ra7J1hsTRNT+zN1sGKTp2tmJZM7Cyddv6de870sMzbwpLsTulmH+uC+7Wx6WG4ZDi2lKpG8AmW63f6UDwYxhiyU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQT8yomAMfi5xCgpY4ucsQNDANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFAAUAA0ADQAOQAzAFMAXABtAGEAdAB0AGgwHhcNMjEwOTA2MTgzODQ1WhcNMjIwOTA3MDAzODQ1WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFAAUAA0ADQAOQAzAFMAXABtAGEAdAB0AGgwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMUnFNSdZW4iTrLgHnMZbEZjOGfL2loz+0lSyLVurfFdof+LJ8NDyxZsUnbv+EbQJ6Nrjf1LS13FcixGIbcTtK2uydYbE0TU/szdbBik6drZiWTOwsnXb+nXvO9LDM28KS7E7pZh/rgvu1selhuGQ4tpSqRvAJlut3+lA8GMYYslAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAoF+zbxVyct8wRPzcs7HPOw6G9PUeO6aCgHIxXq0q8n1P/PPyeevGgEUi4Pa9Mu1R5u1PFu67iTXbexPdQoBXj5TKCZ5rS5qRh+yIpZnId4NqAZzG0OkZWm5vkphktUGfwc3tqTz1xfLVo7mjxqk763qSLLPNiE1As++y9llNv4o=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
