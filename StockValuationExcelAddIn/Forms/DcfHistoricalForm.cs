@@ -59,7 +59,7 @@ namespace StockValuationExcelAddIn.Forms
 
                 // DCF Request Response List
                 List<DataStructures.DcfHistorical> responseList = requests.DcfRequestHistorical(symbol, timeFrame, limit).Result;
-
+                
                 // set column headers
                 dcfHistoricalSheet.Cells[1, 1] = "Date";
                 dcfHistoricalSheet.Cells[1, 2] = "Market Price";

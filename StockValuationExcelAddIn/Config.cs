@@ -44,7 +44,7 @@ namespace StockValuationExcelAddIn
             public String DCF_URL_HISTORICAL(String symbol, String timeframe, int limit)
             {
                 String API = db.GetApi();
-                if (timeframe == "day")
+                if (timeframe == "daily")
                 {
                     return String.Format(
                     config.BASE_URL + "/api/v3/historical-discounted-cash-flow-statement/{0}?limit={1}&apikey={2}",

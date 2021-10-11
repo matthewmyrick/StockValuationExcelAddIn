@@ -14,11 +14,29 @@ namespace StockValuationExcelAddIn
     {
         Config.Urls urls = new Config.Urls();
 
+        // check validity of url
+        public static bool HandleUrlError(string url)
+        {
+            if (url == "String URL Error")
+            {
+                MessageBox.Show("URL Endpoint Error");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
+        }
+
+
         // Historical Prices Requests 
         public async Task<DataStructures.HistoricalPricesWrapper> HistoricalPrices(string symbol, string timeframe, int limit)
         {
             try
             {
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 var client = new HttpClient();
                 String URL = urls.HISTORICAL_PRICES(symbol, timeframe, limit);
                 String responseString = await client.GetStringAsync(URL);
@@ -41,18 +59,28 @@ namespace StockValuationExcelAddIn
         // DCF Request Data
         public async Task<List<DataStructures.DcfHistorical>> DcfRequestHistorical(string symbol, String timeframe, int limit)
         {
+
             try
             {
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 var client = new HttpClient();
-                String URL = urls.DCF_URL_HISTORICAL(symbol, timeframe, limit);
-
+                String URL = urls.DCF_URL_HISTORICAL(symbol, timeframe.Replace(" ", ""), limit);
+                bool error = HandleUrlError(URL);
+                List<DataStructures.DcfHistorical> errorList = new List<DataStructures.DcfHistorical>();
+                MessageBox.Show(errorList.Count().ToString());
+                if (false == error)
+                {
+                    return errorList;
+                }
                 String responseString = await client.GetStringAsync(URL);
+                MessageBox.Show(responseString);
                 List<DataStructures.DcfHistorical> responseList = JsonConvert.DeserializeObject<List<DataStructures.DcfHistorical>>(responseString);
                 return responseList;
             }
-            catch(HttpRequestException ex)
+            catch (HttpRequestException ex)
             {
-                string errorMessage = ex.Message + 
+                string errorMessage = ex.Message +
                     "\nPossible Errors:" +
                     "\n\t- Please check inputs" +
                     "\n\t- API key incorrect please check API settings" +
