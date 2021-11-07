@@ -116,7 +116,7 @@ namespace StockValuationExcelAddIn
 
         private void ViewDocumentationButton_Click(object sender, RibbonControlEventArgs e)
         {
-            ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/matthewmyrick");
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/matthewmyrick/StockValuationExcelAddIn");
             Process.Start(sInfo);
         }
 

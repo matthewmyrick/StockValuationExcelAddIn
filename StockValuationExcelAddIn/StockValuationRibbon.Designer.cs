@@ -41,17 +41,17 @@ namespace StockValuationExcelAddIn
             this.DcfGroup = this.Factory.CreateRibbonGroup();
             this.CurrentDcfModel = this.Factory.CreateRibbonButton();
             this.GenerateHistoricalDcf = this.Factory.CreateRibbonButton();
-            this.ApiGroup = this.Factory.CreateRibbonGroup();
             this.historicalStockDataGorup = this.Factory.CreateRibbonGroup();
             this.historicalDataButton = this.Factory.CreateRibbonButton();
+            this.ApiGroup = this.Factory.CreateRibbonGroup();
             this.SaveApiButton = this.Factory.CreateRibbonButton();
             this.GenerateApiButton = this.Factory.CreateRibbonButton();
             this.ViewDocumentationButton = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.TickerSymbolGroup.SuspendLayout();
             this.DcfGroup.SuspendLayout();
-            this.ApiGroup.SuspendLayout();
             this.historicalStockDataGorup.SuspendLayout();
+            this.ApiGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
@@ -95,14 +95,6 @@ namespace StockValuationExcelAddIn
             this.GenerateHistoricalDcf.Name = "GenerateHistoricalDcf";
             this.GenerateHistoricalDcf.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.GenerateHistoricalDcf_Click);
             // 
-            // ApiGroup
-            // 
-            this.ApiGroup.Items.Add(this.SaveApiButton);
-            this.ApiGroup.Items.Add(this.GenerateApiButton);
-            this.ApiGroup.Items.Add(this.ViewDocumentationButton);
-            this.ApiGroup.Label = "API";
-            this.ApiGroup.Name = "ApiGroup";
-            // 
             // historicalStockDataGorup
             // 
             this.historicalStockDataGorup.Items.Add(this.historicalDataButton);
@@ -117,6 +109,14 @@ namespace StockValuationExcelAddIn
             this.historicalDataButton.Name = "historicalDataButton";
             this.historicalDataButton.ShowImage = true;
             this.historicalDataButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.historicalDataButton_Click);
+            // 
+            // ApiGroup
+            // 
+            this.ApiGroup.Items.Add(this.SaveApiButton);
+            this.ApiGroup.Items.Add(this.GenerateApiButton);
+            this.ApiGroup.Items.Add(this.ViewDocumentationButton);
+            this.ApiGroup.Label = "API";
+            this.ApiGroup.Name = "ApiGroup";
             // 
             // SaveApiButton
             // 
@@ -157,10 +157,10 @@ namespace StockValuationExcelAddIn
             this.TickerSymbolGroup.PerformLayout();
             this.DcfGroup.ResumeLayout(false);
             this.DcfGroup.PerformLayout();
-            this.ApiGroup.ResumeLayout(false);
-            this.ApiGroup.PerformLayout();
             this.historicalStockDataGorup.ResumeLayout(false);
             this.historicalStockDataGorup.PerformLayout();
+            this.ApiGroup.ResumeLayout(false);
+            this.ApiGroup.PerformLayout();
             this.ResumeLayout(false);
 
         }

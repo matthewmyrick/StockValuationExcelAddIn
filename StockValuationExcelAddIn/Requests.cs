@@ -68,13 +68,11 @@ namespace StockValuationExcelAddIn
                 String URL = urls.DCF_URL_HISTORICAL(symbol, timeframe.Replace(" ", ""), limit);
                 bool error = HandleUrlError(URL);
                 List<DataStructures.DcfHistorical> errorList = new List<DataStructures.DcfHistorical>();
-                MessageBox.Show(errorList.Count().ToString());
                 if (false == error)
                 {
                     return errorList;
                 }
                 String responseString = await client.GetStringAsync(URL);
-                MessageBox.Show(responseString);
                 List<DataStructures.DcfHistorical> responseList = JsonConvert.DeserializeObject<List<DataStructures.DcfHistorical>>(responseString);
                 return responseList;
             }
